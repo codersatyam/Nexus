@@ -14,22 +14,22 @@ let sequelize;
 
 // const setupSequelize = () => {
 //   try {
-    if (config.use_env_variable) {
-      sequelize = new Sequelize(config.database, config.username, config.password, {
-        host: config.host,
-        port: config.port,
-        dialect: 'postgres',
-        dialectOptions: config.dialectOptions,
-        timezone: generalConfigs.timezone || "Asia/Calcutta",
-        pool: {
-          max: generalConfigs.dbPoolMax || 40,
-          min: generalConfigs.dbPoolMin || 0,
-          acquire: generalConfigs.dbPoolAcquire || 30000,
-          idle: generalConfigs.dbPoolIdle || 10000,
-        },
-        logging: msg => logger.info(msg)
-      });
-    } else {
+    // if (config.use_env_variable) {
+    //   sequelize = new Sequelize(config.database, config.username, config.password, {
+    //     host: config.host,
+    //     port: config.port,
+    //     dialect: 'postgres',
+    //     dialectOptions: config.dialectOptions,
+    //     timezone: generalConfigs.timezone || "Asia/Calcutta",
+    //     pool: {
+    //       max: generalConfigs.dbPoolMax || 40,
+    //       min: generalConfigs.dbPoolMin || 0,
+    //       acquire: generalConfigs.dbPoolAcquire || 30000,
+    //       idle: generalConfigs.dbPoolIdle || 10000,
+    //     },
+    //     logging: msg => logger.info(msg)
+    //   });
+    // } else {
       const connectionString = `postgresql://${config.username}:${config.password}@${config.host}:${config.port}/${config.database}?sslmode=require`;
    
       
@@ -43,7 +43,7 @@ let sequelize;
         },
         logging: msg => logger.info(msg)
       });
-    }
+    // }
 
 
 fs
