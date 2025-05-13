@@ -1,0 +1,16 @@
+{
+    "development": {
+      "username": "Nexus_owner",
+      "password": "npg_InqUfWY9R4Cu",
+      "port": 5432,
+      "database": "Nexus",
+      "host": "ep-sweet-flower-a4gi65s7-pooler.us-east-1.aws.neon.tech",
+      "dialect": "postgres",
+      "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
+    }
+  }
